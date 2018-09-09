@@ -26,7 +26,6 @@ class Triangle
     end
   end
 
-###### IS VALID TRIANGLE!!!
   def validTriangle?
     if @side1+@side2<@side3 || @side2+@side3<@side1 || @side1+@side3<@side2
       false
@@ -35,7 +34,6 @@ class Triangle
     end
     true
   end
-###### IS VALID TRIANGLE!!!
 
   class TriangleError < StandardError
 	    def message 

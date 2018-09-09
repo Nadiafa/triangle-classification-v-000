@@ -17,22 +17,16 @@ class Triangle
       else
         :scalene
       end 
-    else
-      # begin 
-        raise TriangleError
-      # rescue TriangleError => error
-      # puts error.message
-      # end
     end
   end
 
   def validTriangle?
     if !@side1 || !@side2 || !@side3
-      false
+      raise TriangleError
     elsif  @side1+@side2<@side3 || @side2+@side3<@side1 || @side1+@side3<@side2
-      false
+      raise TriangleError
     elsif @side1<= 0 || @side2<= 0 || @side3<= 0
-      false
+      raise TriangleError
     end
     true
   end

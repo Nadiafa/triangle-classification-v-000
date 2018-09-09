@@ -19,8 +19,8 @@ class Triangle
       end 
     else 
       begin 
-        raise YourCustomError
-      rescue YourCustomError
+        raise TriangleError
+      rescue TriangleError
       end
     end
   end

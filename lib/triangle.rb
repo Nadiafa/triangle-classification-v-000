@@ -26,8 +26,9 @@ class Triangle
     elsif side1 > 0 || side2 > 0 || side3 > 0
       true
     else
-      
+      raise TriangleError
     end
+    
   end
 
   class TriangleError < StandardError

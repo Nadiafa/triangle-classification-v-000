@@ -20,11 +20,11 @@ class Triangle
   end
 
   def validTriangle
-      triangle_valid = false
+      triangle_valid = true
     if side1+side2<side3 || side2+side3<side1 || side1+side3<side2
       triangle_valid = false
-    elsif side1 > 0 || side2 > 0 || side3 > 0
-      triangle_valid = true
+    elsif side1 <= 0 || side2 <= 0 || side3 <= 0
+      triangle_valid = false
     end
     raise TriangleError if triangle_valid == false
   end

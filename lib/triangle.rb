@@ -26,10 +26,10 @@ class Triangle
     elsif side1 > 0 || side2 > 0 || side3 > 0
       true
     else
-      begin 
+      begin
         raise TriangleError
-      rescue TriangleError = > error 
-        puts error.message
+      rescue TriangleError => error
+          puts error.message
       end
     end
   end

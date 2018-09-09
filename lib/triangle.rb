@@ -17,6 +17,11 @@ class Triangle
       else
         :scalene
       end 
+    else 
+      begin 
+        raise YourCustomError
+      rescue YourCustomError
+      end
     end
   end
 

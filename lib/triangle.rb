@@ -25,10 +25,9 @@ class Triangle
       true
     elsif side1 > 0 || side2 > 0 || side3 > 0
       true
-    # else
-    #   raise TriangleError
+    else
+      raise TriangleError
     end
-    raise TriangleError
   end
 
   class TriangleError < StandardError

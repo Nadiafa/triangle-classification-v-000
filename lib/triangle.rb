@@ -28,7 +28,7 @@ class Triangle
   def validTriangle?
     if !@side1 || !@side2 || !@side3
       false
-    elsif !@side1.is_a? Integer || !@side1.is_a? Integer || !@side2.is_a? Integer || !@side2.is_a? Integer || !@side3.is_a? Integer || !@side3.is_a? Integer
+    elsif !@side1.is_a? Integer || !@side1.is_a? Float || !@side2.is_a? Integer || !@side2.is_a? Float || !@side3.is_a? Integer || !@side3.is_a? Float
       false
     elsif  @side1+@side2<@side3 || @side2+@side3<@side1 || @side1+@side3<@side2
       false

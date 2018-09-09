@@ -20,14 +20,15 @@ class Triangle
   end
 
   def validTriangle
-    
-    if (side1+side2>side3 || side2+side3>side1 || side1+side3>side2) ||(side1 > 0 || side2 > 0 || side3 > 0)
-      true
-    # elsif (side1 > 0 || side2 > 0 || side3 > 0)
-    #   true
+      triangle_valid = nil
+    if side1+side2>side3 || side2+side3>side1 || side1+side3>side2
+      triangle_valid =true
+    elsif side1 > 0 || side2 > 0 || side3 > 0
+      triangle_valid =true
     else
-      raise TriangleError
+      triangle_valid = false
     end
+    raise TriangleError if triangle_valid == false
   end
 
   class TriangleError < StandardError
